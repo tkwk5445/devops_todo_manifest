@@ -1,15 +1,10 @@
 backend:
-  image: "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/todo-backend:latest"
+  image: "public.ecr.aws/your-alias/todo-backend:latest"
   replicas: 2
   port: 4000
 
 frontend:
-  image: "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/todo-frontend:latest"
+  image: "public.ecr.aws/your-alias/todo-frontend:latest"
   replicas: 2
   port: 3000
   backend_url: "http://todo-backend-service:4000"
-
-secrets:
-  aws_access_key: "BASE64_ENCODED_AWS_ACCESS_KEY"
-  aws_secret_key: "BASE64_ENCODED_AWS_SECRET_KEY"
-  jwt_secret: "BASE64_ENCODED_JWT_SECRET"

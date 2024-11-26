@@ -20,16 +20,6 @@ spec:
         ports:
         - containerPort: {{ .Values.backend.port }}
         env:
-        - name: AWS_ACCESS_KEY_ID
-          valueFrom:
-            secretKeyRef:
-              name: aws-credentials
-              key: access_key
-        - name: AWS_SECRET_ACCESS_KEY
-          valueFrom:
-            secretKeyRef:
-              name: aws-credentials
-              key: secret_key
         - name: JWT_SECRET
           valueFrom:
             secretKeyRef:

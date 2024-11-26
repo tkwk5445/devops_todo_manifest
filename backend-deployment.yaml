@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: todo-backend
-        image: public.ecr.aws/your-repo/todo-backend:latest
+        image: public.ecr.aws/o8v1k4v5/todo-backend
         ports:
         - containerPort: 4000
 ---

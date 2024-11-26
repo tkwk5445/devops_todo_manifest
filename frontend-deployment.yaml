@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: todo-frontend
-        image: public.ecr.aws/your-repo/todo-frontend:latest
+        image: public.ecr.aws/o8v1k4v5/todo-frontend
         ports:
         - containerPort: 3000
 ---

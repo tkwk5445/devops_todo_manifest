@@ -5,7 +5,7 @@ metadata:
   namespace: argo
 spec:
   source:
-    repoURL: git@github.com:your-org/manifest-repo.git
+    repoURL: https://github.com/tkwk5445/devops_todo_manifest.git
     targetRevision: main
     path: .
   destination:

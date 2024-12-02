@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: todo-frontend
-        image: tkwk5445/todo-frontend:1128.3
+        image: tkwk5445/todo-frontend:1128-4
         ports:
         - containerPort: 80

@@ -6,8 +6,10 @@ metadata:
   labels:
     app: argocd-alb-ingress
   annotations:
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
-    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/ssl-certificate-no: "35351"
+    alb.ingress.kubernetes.io/actions.ssl-redirect: |
+      {"type":"redirect","redirectConfig":{"port":"443","protocol":"HTTPS","statusCode":"HTTP_301"}}
 spec:
   ingressClassName: alb
   defaultBackend:
@@ -16,9 +18,10 @@ spec:
       port:
         number: 80
   rules:
-    - http:
+    - host: argo.wookja.site
+      http:
         paths:
-          - path: /
+          - path: /*
             pathType: Prefix
             backend:
               service:

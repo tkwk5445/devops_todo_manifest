@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: todo-backend
-  namespace: argocd
+  namespace: todo-app
 spec:
   project: default
   source:
     repoURL: https://github.com/tkwk5445/devops_todo_manifest.git
     targetRevision: main
-    path: .
+    path: backend
   destination:
     server: https://kubernetes.default.svc
     namespace: todo-app

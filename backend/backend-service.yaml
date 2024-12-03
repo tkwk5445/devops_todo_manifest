@@ -3,6 +3,9 @@ kind: Service
 metadata:
   name: todo-backend
   namespace: todo-app
+#   annotations:
+#   service.beta.kubernetes.io/ncloud-load-balancer-layer-type: "nplb"
+#   service.beta.kubernetes.io/ncloud-load-balancer-retain-public-ip-on-termination: "true"
 spec:
   selector:
     app: todo-backend

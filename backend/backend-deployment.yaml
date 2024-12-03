@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: todo-backend
-        image: tkwk5445/todo-backend:18
+        image: tkwk5445/todo-backend:latest
         ports:
         - containerPort: 4000

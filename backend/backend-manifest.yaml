@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: todo-backend
-        image: tkwk5445/todo-backend:build-15
+        image: public.ecr.aws/c1p3q5l9/todo-be:build-3
         ports:
         - containerPort: 4000
 

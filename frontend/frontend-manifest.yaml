@@ -50,7 +50,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing # ALB를 인터넷 공개 방식으로 설정
     alb.ingress.kubernetes.io/target-type: ip # 타겟 그룹 타입을 IP 모드로 설정
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:REGION:ACCOUNT_ID:certificate/CERTIFICATE_ID" # SSL 인증서 ARN
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:575108924607:certificate/292949d6-2f8e-448e-86e6-e9a10ff59850" # SSL 인증서 ARN
     alb.ingress.kubernetes.io/actions.ssl-redirect: >
       {"Type": "redirect", "RedirectConfig": {"Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}
     kubernetes.io/ingress.class: alb # Ingress Controller로 ALB 사용

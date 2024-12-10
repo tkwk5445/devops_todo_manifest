@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: todo-frontend
-        image: tkwk5445/todo-frontend:build-33
+        image: public.ecr.aws/c1p3q5l9/todo-fe:build-2
         ports:
         - containerPort: 80
 
